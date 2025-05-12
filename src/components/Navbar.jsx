@@ -33,24 +33,24 @@ const Navbar = () => {
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to='/'
-          className='flex items-center gap-2'
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        <a
+          href="https://github.com/aaisha7ac/Code-Quotient-Backend/archive/refs/heads/main.zip"
+          className="flex items-center gap-2"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
+          download
         >
-        <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[22px] font-bold cursor-pointer flex '>
-            {/*#FF69B4 */}
-         Sanskar &nbsp;
-            <span className='sm:block hidden'> Chaudhary</span>
+          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[22px] font-bold cursor-pointer flex">
+            Sanskar &nbsp;
+            <span className="sm:block hidden"> Chaudhary</span>
           </p>
-        </Link>
+        </a>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -64,11 +64,11 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain"
             onClick={() => setToggle(!toggle)}
           />
 
@@ -77,7 +77,7 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
