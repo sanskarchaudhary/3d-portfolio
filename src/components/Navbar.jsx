@@ -1952,83 +1952,80 @@ void reverseKelementsQueue (int q[], int K)
 
 
 
+return (
+  <nav
+    className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
+      scrolled ? "bg-primary" : "bg-transparent"
+    }`}
+  >
+    <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
 
-  return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        {/* Copy to Clipboard Button */}
-        <button
-  onClick={() => {
-    navigator.clipboard.writeText(labManualText);
-  }}
-  className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
->
-  Copy Lab Manual
-</button>
+      {/* Logo and Name with Copy Functionality */}
+      <div className="flex items-center gap-2">
+        <img
+          src={logo}
+          alt="logo"
+          className="w-9 h-9 object-contain cursor-pointer"
+          onClick={() => {
+            navigator.clipboard.writeText(labManualText);
+          }}
+          title="Click to copy Lab Manual"
+        />
+        <p className="text-white text-[22px] font-bold cursor-pointer flex">
+          Sanskar&nbsp;<span className="sm:block hidden">Chaudhary</span>
+        </p>
+      </div>
 
-
-        {/* Logo and Name */}
-        <div className="flex items-center gap-2">
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[22px] font-bold cursor-pointer flex">
-            Sanskar&nbsp;<span className="sm:block hidden">Chaudhary</span>
-          </p>
-        </div>
-
-        {/* Desktop Nav Links */}
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white-100" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Mobile Menu Icon and Dropdown */}
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
+      {/* Desktop Nav Links */}
+      <ul className="list-none hidden sm:flex flex-row gap-10">
+        {navLinks.map((nav) => (
+          <li
+            key={nav.id}
             className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+              active === nav.title ? "text-white-100" : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer`}
+            onClick={() => setActive(nav.title)}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(false);
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </li>
+        ))}
+      </ul>
+
+      {/* Mobile Menu Icon and Dropdown */}
+      <div className="sm:hidden flex flex-1 justify-end items-center">
+        <img
+          src={toggle ? close : menu}
+          alt="menu"
+          className="w-[28px] h-[28px] object-contain"
+          onClick={() => setToggle(!toggle)}
+        />
+
+        <div
+          className={`${
+            !toggle ? "hidden" : "flex"
+          } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+        >
+          <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  active === nav.title ? "text-white" : "text-secondary"
+                }`}
+                onClick={() => {
+                  setToggle(false);
+                  setActive(nav.title);
+                }}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </nav>
-  );
+    </div>
+  </nav>
+);
 };
 
 export default Navbar;
