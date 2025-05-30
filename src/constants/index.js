@@ -279,21 +279,25 @@ const projects = [
     source_code_link: "https://webapp-laptop-shoping.vercel.app/",
   },
   {
-    name: "Green Level",
+    name: "Dropshipping",
     description:
-      "A sustainability-focused web development project aimed at promoting eco-friendly practices and solutions.",
+      "An e-commerce web project designed to simplify online product sourcing and automate order fulfillment for entrepreneurs.",
     tags: [
       {
-        name: "Web Development",
-        color: "yellow-text-gradient",
+        name: "E-commerce",
+        color: "blue-text-gradient",
       },
       {
-        name: "Sustainability",
-        color: "green-text-gradient",
+        name: "Automation",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "Web App",
+        color: "orange-text-gradient",
       },
     ],
     image: project9,
-    source_code_link: "https://green-level-seven.vercel.app/",
+    source_code_link: "https://dropshipping-azure-eta.vercel.app/",
   },
   {
     name: "Portfolio-1",
