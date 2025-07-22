@@ -1,10 +1,8 @@
 # 3D Portfolio Webpage
 
-[Link to published site](https://annaaxelsson.com/)
-
 ## User Interface
 
-![User Interface](user-interface.png)
+
 
 ---
 
